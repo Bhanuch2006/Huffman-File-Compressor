@@ -1,0 +1,119 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#6a11cb,#2575fc,#00c9ff);
+background-size:300% 300%;
+animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+.box{
+width:420px;
+padding:40px;
+border-radius:16px;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+text-align:center;
+}
+
+.title{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin-bottom:25px;
+}
+
+.title span{
+font-size:34px;
+}
+
+.title h2{
+color:#333;
+font-weight:600;
+}
+
+.upload-area{
+border:2px dashed #6a11cb;
+padding:28px;
+border-radius:12px;
+background:linear-gradient(135deg,#f3f6ff,#eef7ff);
+cursor:pointer;
+transition:0.3s;
+font-weight:500;
+}
+
+.upload-area:hover{
+transform:scale(1.03);
+background:linear-gradient(135deg,#e6ebff,#e6f4ff);
+}
+
+input[type=file]{
+display:none;
+}
+
+.file-name{
+margin-top:12px;
+font-size:14px;
+color:#444;
+}
+
+button{
+margin-top:25px;
+padding:13px 26px;
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#ff7a18,#ffb347);
+color:white;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 8px 15px rgba(0,0,0,0.15);
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 18px rgba(0,0,0,0.2);
+}
+
+.progress{
+margin-top:20px;
+height:8px;
+background:#e0e0e0;
+border-radius:6px;
+overflow:hidden;
+display:none;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#00c9ff,#92fe9d);
+transition:width 1.2s;
+}
+
+.download button{
+background:linear-gradient(135deg,#43e97b,#38f9d7);
+margin-top:15px;
+}
+
+footer{
+margin-top:18px;
+font-size:13px;
+color:#777;
+}

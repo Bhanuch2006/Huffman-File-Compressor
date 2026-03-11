@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upload & Process File</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="title">
+<span>📂</span>
+<h2>Upload & Process File</h2>
+</div>
+
+<label class="upload-area">
+📤 Click to Select File
+<input type="file" id="fileInput">
+</label>
+
+<p id="filePath" class="file-name"></p>
+
+<button onclick="processFile()">⚙ Process File</button>
+
+<div class="progress" id="progress">
+<div class="progress-bar" id="bar"></div>
+</div>
+
+<div class="download">
+<a id="downloadBtn" style="display:none;">
+<button>⬇ Download Processed File</button>
+</a>
+</div>
+
+<footer>
+✨ Simple File Processor Demo
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
