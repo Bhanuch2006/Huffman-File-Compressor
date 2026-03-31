@@ -2,45 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Upload & Process File</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huffman File Compressor</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<main class="app" data-encode-url="/encode" data-decode-url="/decode">
+<header class="nav">
+<a class="brand" href="index.html">
+<span class="brand-mark">HF</span>
+<span>Huffman File Compressor</span>
+</a>
+<nav class="nav-links">
+<a href="index.html#features">Features</a>
+<a href="index.html#workflow">Workflow</a>
+<a href="upload.html" class="btn">New Job</a>
+</nav>
+</header>
 
-<div class="box">
-
-<div class="title">
-<span>📂</span>
-<h2>Upload & Process File</h2>
+<section class="panel">
+<div class="panel-header">
+<div>
+<h1>Upload and process</h1>
+<span>Backend: Huffman encode/decode</span>
+</div>
+<div class="mode-toggle" role="radiogroup" aria-label="Compression mode">
+<label>
+<input type="radio" name="mode" value="encode" checked>
+<span>Compress</span>
+</label>
+<label>
+<input type="radio" name="mode" value="decode">
+<span>Decompress</span>
+</label>
+</div>
 </div>
 
-<label class="upload-area">
-📤 Click to Select File
-<input type="file" id="fileInput">
+<form id="uploadForm">
+<label class="dropzone" id="dropzone">
+<div>
+<strong>Drop a file here</strong>
+<p class="file-meta">or click to choose a file from your machine</p>
+</div>
+<input type="file" id="fileInput" required>
 </label>
 
-<p id="filePath" class="file-name"></p>
+<p id="filePath" class="file-meta"></p>
 
-<button onclick="processFile()">⚙ Process File</button>
+<button class="btn" type="submit" id="submitBtn">Process File</button>
 
 <div class="progress" id="progress">
 <div class="progress-bar" id="bar"></div>
 </div>
 
-<div class="download">
-<a id="downloadBtn" style="display:none;">
-<button>⬇ Download Processed File</button>
-</a>
+<p id="statusMsg" class="status"></p>
+
+<div class="result" id="result">
+<a id="downloadBtn" href="#">Download processed file</a>
+<span id="resultMeta" class="file-meta"></span>
 </div>
 
-<footer>
-✨ Simple File Processor Demo
-</footer>
+<p class="note">Update data-encode-url and data-decode-url in the markup if your backend uses different endpoints.</p>
+</form>
+</section>
 
-</div>
+<p class="footer">Use this interface to send files to the Huffman backend and receive a processed archive.</p>
+</main>
 
 <script src="script.js"></script>
-
 </body>
 </html>

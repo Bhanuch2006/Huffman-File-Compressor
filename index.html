@@ -2,30 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>File Processor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huffman File Compressor</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<div class="box">
-
-<div class="title">
-<span>📂</span>
-<h2>File Processor</h2>
-</div>
-
-<p style="margin-bottom:20px;">Click below to upload and process your file.</p>
-
-<a href="upload.html">
-<button>Go to Upload Page</button>
+<main class="site">
+<header class="nav">
+<a class="brand" href="index.html">
+<span class="brand-mark">HF</span>
+<span>Huffman File Compressor</span>
 </a>
+<nav class="nav-links">
+<a href="#features">Features</a>
+<a href="#workflow">Workflow</a>
+<a href="upload.html" class="btn">Launch App</a>
+</nav>
+</header>
 
-<footer>
-✨ Simple File Processor Demo
-</footer>
-
+<section class="hero">
+<div>
+<h1 class="hero-title">Professional-grade compression, built on classic Huffman coding.</h1>
+<p class="hero-subtitle">Compress or restore text files with deterministic Huffman encoding. The UI focuses on clarity and speed while the backend handles the heavy lifting.</p>
+<div class="hero-actions">
+<a class="btn" href="upload.html">Start Compressing</a>
+<a class="btn secondary" href="#workflow">How It Works</a>
 </div>
+<div class="stats">
+<div class="stat">
+<strong>Lossless</strong>
+<span>Exact reconstruction</span>
+</div>
+<div class="stat">
+<strong>Deterministic</strong>
+<span>Stable outputs</span>
+</div>
+<div class="stat">
+<strong>Fast IO</strong>
+<span>Streamed processing</span>
+</div>
+</div>
+</div>
+<div class="hero-card">
+<h3>Compression with visibility</h3>
+<p>Track progress, get a clean download link, and keep a record of the file you just processed.</p>
+<div class="card">
+<h3>Backend ready</h3>
+<p>Endpoints are configurable so you can plug in your encode/decode service without touching the UI.</p>
+</div>
+</div>
+</section>
 
+<section class="section" id="features">
+<h2>Built for real workflow</h2>
+<div class="cards">
+<div class="card">
+<h3>Dual mode</h3>
+<p>Switch between compression and decompression with a single toggle.</p>
+</div>
+<div class="card">
+<h3>API aware</h3>
+<p>Upload directly to your Huffman backend and return a downloadable archive.</p>
+</div>
+<div class="card">
+<h3>Clean results</h3>
+<p>Clear status messages and a prominent download call-to-action.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="workflow">
+<h2>Three-step workflow</h2>
+<div class="steps">
+<div class="step">
+<span>1</span>
+<p>Select a file to compress or restore.</p>
+</div>
+<div class="step">
+<span>2</span>
+<p>Send it to the Huffman encoder or decoder.</p>
+</div>
+<div class="step">
+<span>3</span>
+<p>Download the processed output instantly.</p>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Ready to connect the backend?</h2>
+<p>Point the app to your encode and decode endpoints and start processing files immediately.</p>
+<a class="btn" href="upload.html">Open the Compressor</a>
+</section>
+
+<p class="footer">Huffman File Compressor UI. Built to sit cleanly on top of a C-based Huffman backend.</p>
+</main>
 </body>
 </html>
